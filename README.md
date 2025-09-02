@@ -13,4 +13,4 @@ You can install it using your system's package manager:
 **For Debian/Ubuntu-based systems:**
 ```bash
 sudo apt-get install figlet
->>>>>>> cd7bc51 (prereq updated in README)
+
