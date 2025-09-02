@@ -1,7 +1,7 @@
 # Shitty_Calculator
 guilty as charged
 
-A really, really bad calculator written in a shell script.
+calculator with an attitude written in shell script.
 
 
 
