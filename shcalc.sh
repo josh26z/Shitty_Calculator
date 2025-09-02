@@ -1,4 +1,25 @@
-#!/bin/sh
+#!/bin/bash
+#########################################################################################
+# Author: srsu
+# Date: 80th anniversary of official end to WW2
+# calculator that makes u wanna count it yourself
+
+
+#########################################################################################
+
+tw() 
+{
+text="$1"
+delay="0.03" 
+for (( i=0; i<${#text}; i++ )); do
+ echo -n "${text:$i:1}"
+ sleep "$delay"
+done
+echo 
+}
+
+
+#########################################################################################
 
 splash()
 {
@@ -25,33 +46,108 @@ echo "##########################################################################
 
 }
 
+#########################################################################################
+
+
 options()
 {
 echo
 echo
-sleep 2
-echo "   lemme be frank... this ones a really shitty calculator... \n   i feel really sorry for u cos u chose this on urself"
-sleep 5
+sleep 1
+tw "   lemme be frank... this ones a really shitty calculator..."
+tw "   i feel sorry for u cos u did this to urself..."
+sleep 1
 echo
-echo "   devtip: CTRL^C NOW..."
+tw "   devtip: CTRL^C NOW..."
 sleep 10
 echo
-echo "   [  Really?? okiee then... enjoiii... ] "
+tw "   [  Really?? okiee then... enjoiii... ] "
 sleep 1
 echo
-echo "   CHOOSE WHAT U WANNA DO...(u must really be having some free time)"
+tw "   CHOOSE WHAT U WANNA DO...(u must really be having some free time)"
 echo
 sleep 1
-echo "		+ add "
-sleep 0.2
-echo "		- subtract"
-sleep 0.2
-echo "		* multiply"
-sleep 0.2
-echo "		/ divide"
-echo
-echo
 }
+
+#########################################################################################
+
+catalog()
+{
+tw    "		+ add "
+sleep 0.2
+tw    "		- subtract"
+sleep 0.2
+tw    "		* multiply"
+sleep 0.2
+tw    "		/ divide"
+echo
+echo
+sele
+}
+
+
+#########################################################################################
+
+
+sele()
+{
+read -p  "   pick ur poison...  " choice
+
+case "$choice" in
+'+')
+add_fun
+;;
+
+'-')
+sub_fun
+;;
+
+'*')
+mul_fun
+;;
+
+'/')
+div_fun
+;;
+
+
+*)
+tw "   your\'e so funny... do that again i close the terminal myself"
+;;
+
+esac
+
+}
+
+#########################################################################################
+
+add_fun()
+{
+echo 1
+}
+
+
+sub_fun()
+{
+echo 2
+}
+
+
+mul_fun()
+{
+echo 3
+}
+
+
+div_fun()
+{
+echo 4
+}
+
+
+#########################################################################################
+
 
 splash
 options
+catalog
