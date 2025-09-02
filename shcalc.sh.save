@@ -113,9 +113,6 @@ div_fun
 
 *)
 tw "   your'e so funny... do that again  & i'd close the terminal myself"
-echo
-echo
-catalog
 ;;
 
 esac
@@ -124,95 +121,27 @@ esac
 
 #########################################################################################
 
-inp()
-{
-read -p "	enter something" num1
-read -p "	enter one more something" num2
-read -p "	one more ??" dummy
-
- if ! [[ "$num1" =~ ^[0-9]+$ ]] || ! [[ "$num2" =~ ^[0-9]+$ ]]; then
-        tw "	This is not meant for u... ill refer u some number system classes.."
-        tw "	Here is what u actually need: "
-	echo "		https://www.youtube.com/watch?v=GPXkjtpGCFI&pp=ygUXdGhhdCdzIHRoZSB3cm9uZyBudW1iZXI%3D"
-        echo "		https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1"
-        echo "		https://www.youtube.com/watch?v=9Deg7VrpHbM&pp=ygUNZ2V0IGhlbHAgbWVtZQ%3D%3D"
-
-        return 1
- fi
-
-}
-
 add_fun()
 {
-inp
-if [ $? -eq 0  ]; then
-local sum=$((num1 + num2))
-tw   "		this might be what you were looking for..."
-echo "		 | "
-echo "		 +----> $sum	"
-tw "		and you can keep that one more to yourself... xoxo"
-echo "					| "
-echo "					+----> $dummy"
-fi
+
 }
+
 
 sub_fun()
 {
-
-inp
-if [ $? -eq 0  ]; then
-local diff=$((num1 - num2))
-tw   "          this is what left..."
-echo "           | "
-echo "           +----> $diff    "
-fi
-
+echo 2
 }
 
 
 mul_fun()
 {
-
-inp
-if [ $? -eq 0  ]; then
-local mul=$((num1 * num2))
-tw   "          product"
-echo "           | "
-echo "           +----> $mul    "
-tw "           and about the 'one more'... its safe.. you can have it back"
-echo "                             | "
-echo "                             +----> $dummy"
-fi
-
+echo 3
 }
 
 
 div_fun()
 {
-
-inp
-  if [ $? -eq 0 ]; then
-    if [ "$num2" -eq 0 ]; then
-      tw "		Lets stop there..."
-      tw "		dont ever involve 0 in between division ever"
-      tw "		bieee...."
-      return 1
-    fi
-
-    local result=$((num1 / num2))
-    local remainder=$((num1 % num2))
-
-    tw "		Dividing your stuff equally..."
-    tw "		This is how many each person gets:"
-    echo "			| "
-    echo "			+----> $result"
-    if [ "$remainder" -ne 0 ]; then
-      tw "		And there's this much left over for the dog:"
-      echo "				| "
-      echo "				+----> $remainder"
-    fi
-  fi
-
+echo 4
 }
 
 
